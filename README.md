@@ -3,7 +3,7 @@
 - 🇷🇺 I live in Moscow, Russia.
 - 🐘 I'm an engineer at [Center of Financial Technologies](https://cft.group/)
 - 🐍 Most of the time I'm writing on Python and YAML.
-- 📫 You can shoot me an email at ![GMail](https://img.shields.io/badge/egorvdot%40gmail.com-%2523E62B1E.svg?style=for-the-badge&logo=gmail&logoColor=white&color=red&link=mailto%3Aegorvdot%40gmail.com)
+- 📫 You can shoot me an email at [![GMail](https://img.shields.io/badge/egorvdot%40gmail.com-%2523E62B1E.svg?style=for-the-badge&logo=gmail&logoColor=white&color=red&link=mailto%3Aegorvdot%40gmail.com)](mailto:egorvdot@gmail.com)
 
 
 ## My humble list of stack badges that I'm currently working with
