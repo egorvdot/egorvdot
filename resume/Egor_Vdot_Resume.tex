@@ -1,0 +1,252 @@
+\mainlanguage[russian]
+\language[russian]
+\enableregime[utf]
+\pdfvariable minorversion 5
+\setupbodyfont[gentium, 11pt]  %
+\setuppapersize[A4] % letter, portrait; A3, A4, A5, A6; landscape
+
+% Отладка
+% \showframe
+% \showgrid
+
+\setupbodyfontenvironment[default][em=italic]
+
+\setupcolors[state=start]
+\setupcolor[rgb]
+
+%%% Section desing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\define[2]\CVSection{
+    \framedtext[
+        framecolor=darkblue,
+        color=darkblue,
+        width=\makeupwidth,
+        offset=2pt,
+        bottomframe=on,
+        align=flushleft,
+        frame=off,
+        strut=no,
+    ]{#2}
+}
+
+\setuphead[section][
+    command=\CVSection,
+    margin=-4pt,
+    rightmargin=10pt,
+    style={\switchtobodyfont[14pt]\bf},
+    before={\vskip 1mm},
+]
+
+\setupitemize[each][joinedup][leftmargin=0em]
+
+%A4 210 x 297 mm
+%letter 215.9 x 279.4
+
+\setuplayout[
+    width=195mm,
+    height=285mm,
+    backspace=8mm,
+    topspace=5mm,
+    top=0mm,
+    header=5mm,
+    footer=8mm,
+    bottom=3mm,
+    margin=20mm,
+    rightedgedistance=15mm,
+    rightedge=70mm,
+]
+
+\setuppagenumbering[location=]
+\setupfootertexts[{\sc Страница \currentpage{} из \lastpage}]
+
+% For \url:
+
+\setupurl[
+    color=black,
+    style=\tf,
+]
+
+% For \goto and \from:
+
+\setupinteraction[
+    state=start,
+    color=black,
+    style=\tf,
+]
+
+\setupexternalfigures[
+    directory={./images},
+    conversion=pdf,
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\starttext
+
+\input header.mkiv
+
+\section{Важные характеристики}
+
+\startitemize[joinedup]
+\item Более 5 лет опыта в разработке программного обеспечения.
+\item Разрабатывал бэкенд для веб-сервисов, инфраструктуру для CI/CD, фреймворк под автотесты и сами автотесты.
+\item Нацелен на решение задач бизнеса, гибко согласую ожидания и сроки.
+\item Профессионально выполняю крупные доработки: анализирую требования, декомпозирую, делегирую, контролирую результат.
+\item Работал в мультиязычных, мультикультурных и распределенных командах.
+\item Активный командный игрок с хорошими навыками коммуникации.
+\stopitemize
+
+%\vskip -15mm
+
+\section{Работал с}
+
+% \placefigure[right,none]{none}{\externalfigure[tux.svg][height=2.5cm]}
+
+\dontleavehmode
+\externalfigure[shell_badge.svg]
+\externalfigure[python_badge.svg]
+\externalfigure[fastapi_badge.svg]
+\externalfigure[swagger_badge.svg]
+% \externalfigure[jira_badge.svg]
+% \externalfigure[confluence_badge.svg]
+
+\dontleavehmode
+\externalfigure[git_badge.svg]
+% \externalfigure[gitlab_badge.svg]
+\externalfigure[gitlab_ci_badge.svg]
+\externalfigure[jenkins_badge.svg]
+\externalfigure[prometheus_badge.svg]
+\externalfigure[grafana_badge.svg]
+% \externalfigure[vim_badge.svg]
+% \externalfigure[vscode_badge.svg]
+
+\dontleavehmode
+\externalfigure[docker_badge.svg]
+\externalfigure[kubernetes_badge.svg]
+\externalfigure[terraform_badge.svg]
+\externalfigure[packer_badge.svg]
+
+\dontleavehmode
+\externalfigure[postgres_badge.svg]
+\externalfigure[sqlite_badge.svg]
+\externalfigure[kafka_badge.svg]
+\externalfigure[elastic_badge.svg]
+
+\dontleavehmode
+\externalfigure[arch_linux_badge.svg]
+\externalfigure[windows_badge.svg]
+\externalfigure[macos_badge.svg]
+\externalfigure[ubuntu_badge.svg]
+
+
+\section{Профессиональный опыт}
+
+\define[3]\Employment{
+    \setupframed[
+        height=1cm,
+        frame=off,
+    ]
+    \startcombination[2]
+        {
+            \framed[
+                align=right,
+                bottom=\vss,
+                top=\vss,
+                width=12.5cm,
+            ]{%
+                {\bfa #1}\\
+                {\sc #2}
+            }
+        }{}
+        {
+            \framed[
+                align=flushright,
+                bottom=\vss,
+                top=\vss,
+                width=6.5cm,
+            ]{%
+                {\bf #3}
+            }
+        }{}
+    \stopcombination
+}
+
+
+\useURL[adr][https://github.com/joelparkerhenderson/architecture-decision-record][][Architecture Decision Log]
+
+\Employment{Центр Финансовых Технологий -- Удаленно}
+    {Главный инженер машинного обучения}
+    {2024/04~--~до~настоящего~времени}
+\placefigure[right,none]{none}{\externalfigure[cft_logo_ru.png][width=4cm]}
+\startitemize
+\item Работаю в команде, развивающей CI/CD процессы для всех бизнес-юнитов отдела.
+\item Минимизирую трудозатраты новичков на подключение к проектам, поэтапно внедряя Devcontainers в репозиториях отдела.
+\item Сокращаю время на старт следующего образовательного курса, автоматизируя подготовку инфраструктуры для него.
+\item Менторю нанятого джуниора, управляя его бэклогом по внутренним проектам.
+\stopitemize
+
+\blank
+
+\Employment{Центр Финансовых Технологий -- Удаленно}
+    {Ведущий инженер машинного обучения}
+    {2022/10~--~2024/03}
+\placefigure[right,none]{none}{\externalfigure[cft_logo_ru.png][width=4cm]}
+\startitemize
+\item Сократил до 15 минут время на инициализацию репозитория с новым сервисом, удовлетворяющим внутренние регламенты.
+\item Стабилизировал качество шаблона GitLab CI для микросервисов, внедрив его тестирование с помощью Python.
+\item Курировал образовательный курс, который позволил увеличить штат отдела в 1,5 раза (на 11 человек).
+\item Обеспечил долгосрочный рост квалификации сотрудников отдела, внедрив {\from[adr]} для инфраструктурных проблем.
+\item Удовлетворил требования GDPR к технической инфраструктуре для Европейской части бизнеса.
+\stopitemize
+
+\page
+
+\Employment{Network Optix -- Удаленно}
+    {Software Engineer in Test}
+    {2021/08~--~2022/09}
+\placefigure[right,none]{none}{\externalfigure[Nx_Logo.png][width=4cm]}
+\startitemize
+\item Обеспечил надежную доставку отчетов тестирования для доступа к информации о результатах верификации качества.
+\item Настроил CI для развертывания сервиса отчетности.
+\item Развивал систему верификации функционала продукта для повышения его качества.
+% \item Купировал потерю данных о ночных запусках автотестов
+% \item Реализовал надежную доставку отчетных данных до сервиса отчетности на основе SQLite.
+\stopitemize
+
+\blank
+
+\Employment{Центр Финансовых Технологий -- Новосибирск}
+    {Ведущий инженер-программист}
+    {2018/10~--~2021/07}
+\placefigure[right,none]{none}{\externalfigure[cft_logo_ru.png][width=4cm]}
+\startitemize
+\item Закрыл потенциальный поток фрода, сэкономив компании более 1 млн рублей в неделю.
+\item Стабилизировал поставку бизнес-ценности на сервисе скоринга, обеспечив выполнение типовых задач за 1-2 дня.
+\item Ускорил обработку заявок от клиентов, заменив ручную обработку сервисом скоринга.
+\item Ускорил доставку изменений в сервисах подразделения до production с нескольких дней до нескольких минут.
+\item Сократил трудозатраты на вхождение и поддержку сервиса валидации анкеты с нескольких дней до нескольких часов.
+\stopitemize
+
+\blank
+
+\section{Образование (Бакалавр)}
+
+\Employment{Алтайский государственный технический университет имени~И.И.~Ползунова -- Барнаул}
+    {}
+    {2013/09~--~2017/06}
+\placefigure[right,none]{none}{\externalfigure[altstu_logo.png][width=3cm]}
+\startitemize
+\item Факультет Информационных Технологий.
+\item Программная инженерия.
+\item Диплом с отличием.
+\stopitemize
+
+
+\section{Языки}
+\startitemize
+    \item Русский -- Родной.
+    \item English -- Читаю техническую документацию, пишу с подсказками DeepL, разговариваю и слушаю слабо (между A2 и B1).
+\stopitemize
+
+\stoptext

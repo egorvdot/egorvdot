@@ -1,0 +1,43 @@
+\useURL[calendly][https://calendly.com/egorvdot]
+\useURL[telegram][https://t.me/egorvdot]
+\useURL[mail][mailto:egorvdot@google.com][][egorvdot@google.com]
+\useURL[github][https://github.com/egorvdot]
+
+\definecolor[card][r=0.8,g=0.8,b=1,a=1,t=0.5]
+\setupframed[height=3.0cm,frame=off]
+
+\startcombination[2]
+{%
+	\framed[
+		width=11cm,
+		top=\vss,
+		bottom=\vss,
+	]{%
+		{\switchtobodyfont[24pt] Егор~В.}
+		\blank[3mm]
+		\hairline
+		\blank[.25mm]
+		{\tfa\sc Senior~Software~Engineer}
+	}
+}{}
+{%
+	\framed[
+		align=flushleft,
+		background=color,
+		backgroundcolor=card,
+		bottom=\vss,
+		offset=5pt,
+		style=\tfx,
+		top=\vss,
+		width=8.0cm,
+	]{%
+		{%
+			{\bf Адрес:} \dotfill{} Москва, Россия \\
+			{\bf Calendly:} \dotfill{} \from[calendly] \\
+			{\bf Telegram:} \dotfill{} \from[telegram] \\
+			{\bf Email:} \dotfill{} \from[mail] \\
+			{\bf GitHub:} \dotfill{} \from[github] \\
+		}
+	}
+}{}
+\stopcombination
