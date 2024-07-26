@@ -1,6 +1,6 @@
 # Hi there 👋 I'm Egor
 
-- 🇷🇺 I live in Moscow, Russia.
+- 🇷🇺 I live in Irkutsk, Russia.
 - 🐘 I'm an engineer at [Center of Financial Technologies](https://cft.group/)
 - 🐍 Most of the time I'm writing on Python and YAML.
 - 📫 You can shoot me an email at [![GMail](https://img.shields.io/badge/egorvdot%40gmail.com-%2523E62B1E.svg?style=for-the-badge&logo=gmail&logoColor=white&color=red&link=mailto%3Aegorvdot%40gmail.com)](mailto:egorvdot@gmail.com)
